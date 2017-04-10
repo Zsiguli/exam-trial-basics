@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class CountAs {
   public static void main(String[] args) {
-    List<String> rawDataFromFile = getListFromFile("file.txt");
+    List<String> rawDataFromFile = getListFromFile("afile.txt");
     Map<Character, Integer> letterOccurrences = getLetterOccurrences(rawDataFromFile);
     System.out.println(letterOccurrences.get('a'));
   }
@@ -29,7 +29,7 @@ public class CountAs {
     Map<Character, Integer> letterOccurrences = new HashMap<>();
     for (String line : rawDataFromFile) {
       for (int i = 0; i < line.length(); ++i) {
-        char currentChar = line.charAt(i);
+        char currentChar = line.toLowerCase().charAt(i);
         if (letterOccurrences.get(currentChar) == null) {
           letterOccurrences.put(currentChar, 1);
         } else {
