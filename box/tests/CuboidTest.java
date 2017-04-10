@@ -34,6 +34,6 @@ public class CuboidTest {
 
   @Test
   public void getVolume() throws Exception {
+    assertEquals(cuboid.getVolume(), volume);
   }
-
 }
