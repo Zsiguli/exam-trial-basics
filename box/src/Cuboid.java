@@ -14,4 +14,10 @@ public class Cuboid {
     surface = 2 * (a * b + a * c + b * c);
     return surface;
   }
+
+  public int getVolume() {
+    int volume;
+    volume = a * b * c;
+    return volume;
+  }
 }
