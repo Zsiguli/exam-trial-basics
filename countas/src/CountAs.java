@@ -11,7 +11,7 @@ public class CountAs {
   public static void main(String[] args) {
     List<String> rawDataFromFile = getListFromFile("afile.txt");
     Map<Character, Integer> letterOccurrences = getLetterOccurrences(rawDataFromFile);
-    System.out.println(letterOccurrences.get('a'));
+    printLetterOccurrence(letterOccurrences, 'a');
   }
 
   public static List<String> getListFromFile(String fileName) {
@@ -39,5 +39,13 @@ public class CountAs {
       }
     }
     return letterOccurrences;
+  }
+
+  public static void printLetterOccurrence(Map<Character, Integer> letterOccurrences, Character character) {
+    if (letterOccurrences.get(character) == null) {
+      System.out.println(0);
+    } else {
+      System.out.println(letterOccurrences.get(character));
+    }
   }
 }
