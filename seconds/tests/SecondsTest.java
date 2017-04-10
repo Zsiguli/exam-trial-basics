@@ -16,7 +16,7 @@ public class SecondsTest {
     originalList.add(19);
     List<Integer> testList = new ArrayList<>();
     testList.add(4);
-    testList.add(8);
+    testList.add(19);
     assertEquals(Seconds.returnEverySecondFromGivenList(originalList), testList);
   }
 }
