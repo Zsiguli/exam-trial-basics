@@ -32,4 +32,13 @@ The application is accepted if:
 ## 5. Question time! (~15 mins) [2p]
 
 ### How can you generate a random number? [2p]
-#### Your answer: [add your answer here]
+#### Your answer:
+(int) (x + Math.random() * y);
+where x is the smallest possible number including
+and x + y is the biggest possible number excluding
+(int) is an opportunity if I need int othwerwise the
+most times the result is a float
+I can use (double) as well
+I can use Math.round, Math.ceil, Math.floor instead of 
+casting if I need proper value
+
