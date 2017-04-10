@@ -10,18 +10,7 @@ import java.util.Map;
 public class CountAs {
   public static void main(String[] args) {
     List<String> rawDataFromFile = getListFromFile("file.txt");
-    Map<Character, Integer> letterOccurrences = new HashMap<>();
-    for (String line : rawDataFromFile) {
-      for (int i = 0; i < line.length(); ++i) {
-        char currentChar = line.charAt(i);
-        if (letterOccurrences.get(currentChar) == null) {
-          letterOccurrences.put(currentChar, 1);
-        } else {
-          int currentValue = letterOccurrences.get(currentChar);
-          letterOccurrences.put(currentChar, ++currentValue);
-        }
-      }
-    }
+    Map<Character, Integer> letterOccurrences = getLetterOccurrences(rawDataFromFile);
     System.out.println(letterOccurrences.get('a'));
   }
 
@@ -34,5 +23,21 @@ public class CountAs {
       listFromFile = new ArrayList<>();
     }
     return listFromFile;
+  }
+
+  public static Map<Character, Integer> getLetterOccurrences(List<String> rawDataFromFile) {
+    Map<Character, Integer> letterOccurrences = new HashMap<>();
+    for (String line : rawDataFromFile) {
+      for (int i = 0; i < line.length(); ++i) {
+        char currentChar = line.charAt(i);
+        if (letterOccurrences.get(currentChar) == null) {
+          letterOccurrences.put(currentChar, 1);
+        } else {
+          int currentValue = letterOccurrences.get(currentChar);
+          letterOccurrences.put(currentChar, ++currentValue);
+        }
+      }
+    }
+    return letterOccurrences;
   }
 }
