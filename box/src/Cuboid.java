@@ -9,5 +9,9 @@ public class Cuboid {
     this.c = c;
   }
 
-  
+  public int getSurface() {
+    int surface;
+    surface = 2 * (a * b + a * c + b * c);
+    return surface;
+  }
 }
