@@ -10,7 +10,8 @@ public class PirateCounter {
     pirates.add(new Pirate("Jack", true, 16));
     pirates.add(new Pirate("Morgan", false, 17));
     pirates.add(new Pirate("Hook", true, 20));
-    System.out.println(getRichWoodenLegPiratesName(pirates).toString());
+    List<String> richWoodenLegPiratesName = getRichWoodenLegPiratesName(pirates);
+    printRichWoodenLegPiratesName(richWoodenLegPiratesName);
   }
 
   public static List<String> getRichWoodenLegPiratesName(List<Pirate> pirates) {
@@ -21,5 +22,13 @@ public class PirateCounter {
       }
     }
     return richWoodenLegPiratesName;
+  }
+
+  public static void printRichWoodenLegPiratesName(List<String> richWoodenLegPiratesName) {
+    String finalListOfNames = new String();
+    for (String name : richWoodenLegPiratesName) {
+      finalListOfNames += name + "\n";
+    }
+    System.out.println(finalListOfNames);
   }
 }
